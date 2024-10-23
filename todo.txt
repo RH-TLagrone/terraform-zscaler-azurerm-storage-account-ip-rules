@@ -1,0 +1,10 @@
+(A) Update rbd-gr-dev +Terraform-RBD-BI @dev targets:azurerm_storage_account.SA_rbd-gr-dev
+(A) Update rhc-ds-dev +Terraform-RHC-BI @dev targets:azurerm_storage_account.SA_rhc-ds-dev
+(B) Update ccb-ds-qa +Terraform-RCC-BI @uat
+(B) Update rbd-gr-qa +Terraform-RBD-BI @uat targets:azurerm_storage_account.SA_rbd-gr-uat
+(B) Update rhc-ds-uat +Terraform-RHC-BI @uat targets:azurerm_storage_account.SA_rhc-ds-uat
+(C) Update ccb-ds-prd +Terraform-RCC-BI @prd
+(C) Update rbd-gr-prod +Terraform-RBD-BI @prd targets:azurerm_storage_account.SA_rbd-gr-prd
+(C) Update rhc-ds-prd +Terraform-RHC-BI @prd
+
+x (A) 2024-08-04 Update ccb-ds-dev +Terraform-RCC-BI @dev targets:azurerm_storage_account.SA_ccb-ds-dev
