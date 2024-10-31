@@ -33,14 +33,15 @@ variable "cloud" {
 variable "level" {
   type        = string
   nullable    = false
-  default     = "required"
+  default     = "recommended"
   description = <<-EOT
     Logical access level for which to return Zscaler Hub IP addresses.
 
-    Must be either "required" or "recommended", where the "required" set of Zscaler Hub IP addresses
+    Must be either "recommended" or "required", where the "required" set of Zscaler Hub IP addresses
     is a proper subset of the "recommended" set of Zscaler Hub IP addresses when compared logically;
     i.e. {required} ⊆ {recommended}. The broader "recommended" access level affords more resiliency
     and scalability, whereas the narrower "required" access level minimizes exposure.
+    (defaults to "recommended")
 
     Note:
       Zscaler Hub IP address ranges run vital Zscaler cloud services, platform management, and monitoring.
@@ -51,7 +52,7 @@ variable "level" {
     EOT
 
   validation {
-    condition     = contains(["required", "recommended"], var.level)
-    error_message = "The level argument must be either \"required\" or \"recommended\"."
+    condition     = contains(["recommended", "required"], var.level)
+    error_message = "The level argument must be either \"recommended\" or \"required\"."
   }
 }
